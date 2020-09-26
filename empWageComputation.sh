@@ -7,10 +7,10 @@ read -p forTypeOfEmployee
 empRatePerHr=20;
 empCheck=$forTypeOfEmployee;
 case $empCheck in
-        $isFullTime)
+        $1)
                 empHrs=8
                 ;;
-        $isPartTime)
+        $2)
                 empHrs=4
                 ;;
         *)
@@ -18,4 +18,6 @@ case $empCheck in
                 ;;
 esac
 
-salary=$(($empHrs*$empRatePerHr));
+perDaySalary=$(($empHrs*$empRatePerHr));
+TotalSalary=$(($perDaySalary*20));
+echo "Salary for month : " $TotalSalary
