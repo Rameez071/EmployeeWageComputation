@@ -51,5 +51,7 @@ function cal_wage_for_month()
        echo "$total_wage"
 
  }
+
+
 result="$( cal_wage_for_month $(()) )"
 echo $result
