@@ -3,11 +3,13 @@ echo "Welcome to Employee Wage Computation program"
 function check_attend()
 {
   attend=$((RANDOM%2))
+
   case $attend in
-  0) 
+    0) 
        echo "0" ;;
-  1) 
+    1) 
        echo "1" ;;
+ 
   esac
 }
 
@@ -16,15 +18,15 @@ function gethour()
   val="$( check_attend $(()) )"
   if [ $val -eq 0 ]
   then
-   	val1=$((RANDOM%2))
- 	  case $val1 in 
-	   0)
-		  hours=8
-	     echo $hours ;;
-      1)	
-		  hours=4
-		  echo $hours ;;
-     esac
+   	 val1=$((RANDOM%2))
+	    case $val1 in 
+	    0)
+		   hours=8
+	      echo $hours ;;
+       1)	
+		   hours=4
+		   echo $hours ;;
+       esac
   fi
 }
 function check_Employee_wage()
@@ -52,7 +54,8 @@ function cal_wage_for_month()
        break;
   fi
   done
-       echo "$total_wage"
-       echo ${storeing_Wages[@]}
+       echo "total wages are: $total_wage"
+       echo "total days are:  ${!storeing_Wages[@]}"
+       echo "daily wages are: ${storeing_Wages[@]}"
  }
 cal_wage_for_month
