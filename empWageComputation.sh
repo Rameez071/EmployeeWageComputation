@@ -1,6 +1,5 @@
 #!/bin/bash -x
-echo "Welcome to Employee Wage Computation Program";
-
+echo "Welcome to Employee Wage Computation program"
 function check_attend()
 {
   attend=$((RANDOM%2))
